@@ -13,9 +13,13 @@
 		C07EB7F326089C980018EB19 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C07EB7F126089C980018EB19 /* Main.storyboard */; };
 		C07EB7F526089C990018EB19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C07EB7F426089C990018EB19 /* Assets.xcassets */; };
 		C07EB7F826089C990018EB19 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C07EB7F626089C990018EB19 /* LaunchScreen.storyboard */; };
+		FF018884D42945E4043AACEE /* Pods_test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 987EDE5AD4C6CBB1DC98A9F9 /* Pods_test.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		75CABA993445A277B9A5C0DE /* Pods-test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-test.release.xcconfig"; path = "Target Support Files/Pods-test/Pods-test.release.xcconfig"; sourceTree = "<group>"; };
+		987EDE5AD4C6CBB1DC98A9F9 /* Pods_test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF62FD5B09177323883F7794 /* Pods-test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-test.debug.xcconfig"; path = "Target Support Files/Pods-test/Pods-test.debug.xcconfig"; sourceTree = "<group>"; };
 		C07EB7E826089C980018EB19 /* test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C07EB7EB26089C980018EB19 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C07EB7ED26089C980018EB19 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,17 +35,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF018884D42945E4043AACEE /* Pods_test.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1283F37B4E0921D4C5407AF3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AF62FD5B09177323883F7794 /* Pods-test.debug.xcconfig */,
+				75CABA993445A277B9A5C0DE /* Pods-test.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		37B4AD5B64D55452DA6EEF49 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				987EDE5AD4C6CBB1DC98A9F9 /* Pods_test.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C07EB7DF26089C980018EB19 = {
 			isa = PBXGroup;
 			children = (
 				C07EB7EA26089C980018EB19 /* test */,
 				C07EB7E926089C980018EB19 /* Products */,
+				1283F37B4E0921D4C5407AF3 /* Pods */,
+				37B4AD5B64D55452DA6EEF49 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C07EB7FC26089C990018EB19 /* Build configuration list for PBXNativeTarget "test" */;
 			buildPhases = (
+				A33F78A26D54F0BEBCF76785 /* [CP] Check Pods Manifest.lock */,
 				C07EB7E426089C980018EB19 /* Sources */,
 				C07EB7E526089C980018EB19 /* Frameworks */,
 				C07EB7E626089C980018EB19 /* Resources */,
+				2014C47820E8E786D98EAA3A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -131,6 +158,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2014C47820E8E786D98EAA3A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-test/Pods-test-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-test/Pods-test-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-test/Pods-test-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A33F78A26D54F0BEBCF76785 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-test-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C07EB7E426089C980018EB19 /* Sources */ = {
@@ -283,6 +352,7 @@
 		};
 		C07EB7FD26089C990018EB19 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF62FD5B09177323883F7794 /* Pods-test.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -302,6 +372,7 @@
 		};
 		C07EB7FE26089C990018EB19 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 75CABA993445A277B9A5C0DE /* Pods-test.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
