@@ -9,9 +9,9 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var numToCalculate: UITextField!
+    @IBOutlet weak var numberToCalculate: UITextField!
     
-    @IBOutlet weak var result: UITextField!
+    @IBOutlet weak var calculatingResult: UITextField!
     
     
     
@@ -22,17 +22,18 @@ class ViewController: UIViewController {
 
     @IBAction func calculate(_ sender: UIButton) {
         
-        if Double(numToCalculate.text!)! < 1 {
-            result.text = "\(Double(numToCalculate.text!)!*10)"
+        if Double(numberToCalculate.text!) != nil {
+        if Double(numberToCalculate.text!)! < 1 {
+            calculatingResult.text = "\(Double(numberToCalculate.text!)!*10)"
         
         }
         else {
-            result.text = "\(Double(numToCalculate.text!)!/10)"
+            calculatingResult.text = "\(Double(numberToCalculate.text!)!/10)"
             
         }
         
         
     }
-    
+    }
 }
 

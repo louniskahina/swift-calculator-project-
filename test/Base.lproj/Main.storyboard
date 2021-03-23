@@ -49,8 +49,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="numToCalculate" destination="HhF-Id-GaG" id="08u-hU-kCU"/>
-                        <outlet property="result" destination="q3r-8k-BOL" id="3oO-4e-Dys"/>
+                        <outlet property="calculatingResult" destination="q3r-8k-BOL" id="3oO-4e-Dys"/>
+                        <outlet property="numberToCalculate" destination="HhF-Id-GaG" id="08u-hU-kCU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
