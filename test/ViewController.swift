@@ -22,9 +22,14 @@ class ViewController: UIViewController {
 
     @IBAction func calculate(_ sender: UIButton) {
         
+        if Double(numToCalculate.text!)! < 1 {
+            result.text = "\(Double(numToCalculate.text!)!*10)"
         
-        
-        
+        }
+        else {
+            result.text = "\(Double(numToCalculate.text!)!/10)"
+            
+        }
         
         
     }

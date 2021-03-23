@@ -16,21 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter a number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HhF-Id-GaG">
-                                <rect key="frame" x="159" y="212" width="97" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="result" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="q3r-8k-BOL">
-                                <rect key="frame" x="159" y="459" width="97" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lFF-Q7-Ntz">
-                                <rect key="frame" x="167" y="337" width="80" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lFF-Q7-Ntz">
+                                <rect key="frame" x="175" y="337" width="64" height="30"/>
                                 <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <state key="normal" title="Calculate"/>
@@ -38,9 +25,28 @@
                                     <action selector="calculate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GN2-tj-xhX"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="result" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="q3r-8k-BOL">
+                                <rect key="frame" x="144" y="459" width="126.5" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter a number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HhF-Id-GaG">
+                                <rect key="frame" x="144" y="230" width="126.5" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="HhF-Id-GaG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="186" id="6s6-00-YpU"/>
+                            <constraint firstItem="q3r-8k-BOL" firstAttribute="top" secondItem="lFF-Q7-Ntz" secondAttribute="bottom" constant="92" id="73P-B1-eSh"/>
+                            <constraint firstItem="lFF-Q7-Ntz" firstAttribute="centerX" secondItem="HhF-Id-GaG" secondAttribute="centerX" id="7Fg-O2-bXu"/>
+                            <constraint firstItem="q3r-8k-BOL" firstAttribute="centerX" secondItem="HhF-Id-GaG" secondAttribute="centerX" id="LYg-DY-p71"/>
+                            <constraint firstItem="HhF-Id-GaG" firstAttribute="leading" secondItem="q3r-8k-BOL" secondAttribute="leading" id="eU4-GZ-1Uv"/>
+                            <constraint firstItem="HhF-Id-GaG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gJT-6U-oke"/>
+                            <constraint firstItem="lFF-Q7-Ntz" firstAttribute="top" secondItem="HhF-Id-GaG" secondAttribute="bottom" constant="73" id="wv0-x3-sj4"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="numToCalculate" destination="HhF-Id-GaG" id="08u-hU-kCU"/>
