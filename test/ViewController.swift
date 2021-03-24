@@ -9,31 +9,30 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var numberToCalculate: UITextField!
+    @IBOutlet weak var numberTextField: UITextField!
     
-    @IBOutlet weak var calculatingResult: UITextField!
-    
-    
+    @IBOutlet weak var resultLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+      
+    }
+    func calculateRate( userValue : Double) -> Double {
+       if userValue < 1 {
+           return userValue * 10
+       }
+       else {
+           return userValue / 10
+       }
     }
 
     @IBAction func calculate(_ sender: UIButton) {
-        
-        if Double(numberToCalculate.text!) != nil {
-        if Double(numberToCalculate.text!)! < 1 {
-            calculatingResult.text = "\(Double(numberToCalculate.text!)!*10)"
-        
+        if let numberTextFieldText = numberTextField.text, let numberToCalculate = Double(numberTextFieldText) {
+             
+               resultLabel.text = String(calculateRate( userValue : numberToCalculate))
+            }
         }
-        else {
-            calculatingResult.text = "\(Double(numberToCalculate.text!)!/10)"
-            
-        }
-        
-        
-    }
-    }
+    
 }
 
