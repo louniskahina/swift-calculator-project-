@@ -25,8 +25,15 @@ class calculatingTests : XCTestCase {
         XCTAssertEqual("26", multiplyAdd)
         let divideMinus = vc.calculateFormula(formula: "30-5/5")
         XCTAssertEqual("29", divideMinus)
+        //how to test a void methode ?
+        /*func testAddElement(){
+            var text = "098"
+            let addElement = vc.addElementToFormula(element: "001")
+            
+        }*/
         
     }
+    
 }
 
 

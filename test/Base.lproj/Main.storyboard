@@ -365,7 +365,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="wS9-qT-EZW"/>
                     <connections>
-                        <outlet property="resultLabel2" destination="Hwp-BO-qrY" id="EAo-zY-ONZ"/>
+                        <outlet property="resultLabel" destination="Hwp-BO-qrY" id="EAo-zY-ONZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
