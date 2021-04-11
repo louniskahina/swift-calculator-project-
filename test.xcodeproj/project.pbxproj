@@ -15,6 +15,8 @@
 		C07EB7F326089C980018EB19 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C07EB7F126089C980018EB19 /* Main.storyboard */; };
 		C07EB7F526089C990018EB19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C07EB7F426089C990018EB19 /* Assets.xcassets */; };
 		C07EB7F826089C990018EB19 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C07EB7F626089C990018EB19 /* LaunchScreen.storyboard */; };
+		C083123C261F245300B73509 /* NotesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C083123B261F245300B73509 /* NotesTableViewController.swift */; };
+		C0CD329626122805003D8866 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CD329526122805003D8866 /* LaunchViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,8 @@
 		C07EB7F426089C990018EB19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C07EB7F726089C990018EB19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C07EB7F926089C990018EB19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C083123B261F245300B73509 /* NotesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesTableViewController.swift; sourceTree = "<group>"; };
+		C0CD329526122805003D8866 /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,9 +98,11 @@
 				C07EB7EB26089C980018EB19 /* AppDelegate.swift */,
 				C07EB7ED26089C980018EB19 /* SceneDelegate.swift */,
 				C07EB7EF26089C980018EB19 /* ViewController.swift */,
+				C083123B261F245300B73509 /* NotesTableViewController.swift */,
 				C07EB7F126089C980018EB19 /* Main.storyboard */,
 				C07EB7F426089C990018EB19 /* Assets.xcassets */,
 				C07EB7F626089C990018EB19 /* LaunchScreen.storyboard */,
+				C0CD329526122805003D8866 /* LaunchViewController.swift */,
 				C07EB7F926089C990018EB19 /* Info.plist */,
 			);
 			path = test;
@@ -214,6 +220,8 @@
 				C07EB7F026089C980018EB19 /* ViewController.swift in Sources */,
 				C07EB7EC26089C980018EB19 /* AppDelegate.swift in Sources */,
 				C07EB7EE26089C980018EB19 /* SceneDelegate.swift in Sources */,
+				C0CD329626122805003D8866 /* LaunchViewController.swift in Sources */,
+				C083123C261F245300B73509 /* NotesTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

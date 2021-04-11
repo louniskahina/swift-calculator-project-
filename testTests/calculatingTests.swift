@@ -10,17 +10,22 @@ import XCTest
 
 
 class calculatingTests : XCTestCase {
-    
-    func testCalculatingRate() {
+
+    func testCalculateFormula() {
         let vc = ViewController()
-        let deviser10 = vc.calculateRate20or10(userValue: 100, rate : 10)
-        XCTAssertEqual(10, deviser10)
-        let multiply10 = vc.calculateRate20or10(userValue: -7, rate : 10)
-        XCTAssertEqual(-70, multiply10)
-        let deviser20 = vc.calculateRate20or10(userValue: 100, rate : 20)
-        XCTAssertEqual(5, deviser20)
-        let multiply20 = vc.calculateRate20or10(userValue: -7, rate : 20)
-        XCTAssertEqual(-140, multiply20)
+        let add = vc.calculateFormula(formula: "5+5")
+        XCTAssertEqual("10", add)
+        let minus = vc.calculateFormula(formula: "5-5")
+        XCTAssertEqual("0", minus)
+        let divide = vc.calculateFormula(formula: "5/5")
+        XCTAssertEqual("1", divide)
+        let multiply = vc.calculateFormula(formula: "5*5")
+        XCTAssertEqual("25", multiply)
+        let multiplyAdd = vc.calculateFormula(formula: "5*5+1")
+        XCTAssertEqual("26", multiplyAdd)
+        let divideMinus = vc.calculateFormula(formula: "30-5/5")
+        XCTAssertEqual("29", divideMinus)
+        
     }
 }
 
