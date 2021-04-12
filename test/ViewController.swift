@@ -23,9 +23,10 @@ class ViewController: UIViewController {
    func calculateFormula(formula : String) -> String{
    
         let mathExpression = NSExpression(format: formula)
-            let mathValue = mathExpression.expressionValue(with: nil, context: nil) as? Int
-    //forced unwrapping
-            return String(mathValue!)
+    guard let mathValue = mathExpression.expressionValue(with: nil, context: nil) as? Int else {
+        fatalError(" !!! ")
+    }
+            return String(mathValue)
     }
     
     func addElementToFormula(element : String) {
@@ -96,7 +97,7 @@ class ViewController: UIViewController {
             
         case 11:
           //  resultLabel.text! += "-"
-            addElementToFormula(element: elements[5])
+            addElementToFormula(element: elements[7])
           
         case 12:
             //   resultLabel.text! += "/"
@@ -104,7 +105,7 @@ class ViewController: UIViewController {
            
         default:
           //  resultLabel.text! += "*"
-            addElementToFormula(element: elements[7])
+            addElementToFormula(element: elements[5])
            
         }
       
@@ -122,6 +123,6 @@ class ViewController: UIViewController {
 
 extension String {
     var isValidFormul: Bool {
-        NSPredicate(format: "SELF MATCHES %@", "[0-9]+[-*/+]?[0-9]+").evaluate(with: self)
+        NSPredicate(format: "SELF MATCHES %@", "[[0-9]+[-*/+]?[0-9]+]+").evaluate(with: self)
     }
 }
