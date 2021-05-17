@@ -15,8 +15,10 @@ class MathViewController: UIViewController {
     
     @IBAction func clearButtonAction(_ sender: UIButton) {
         mathViewModel.clearCurrentOperation()
-        showCurrent(operation: mathViewModel.currentOperation)
+       // showCurrent(operation: mathViewModel.currentOperation)
+        resultLabel.showCurrent(operation: mathViewModel.currentOperation)
     }
+    //à tester
     /*func addElementToCurrentOperation(tag: Int) {
         let elements = ["0","1","2","3","4","5","6","7","8","9","+","-","/","*"]
         mathViewModel.currentOperation.append(elements[tag])
@@ -24,7 +26,8 @@ class MathViewController: UIViewController {
     
     @IBAction func resultButtonAction(_ sender: UIButton) {
         if let result = mathViewModel.calculate(operation: mathViewModel.currentOperation) {
-            showCurrent(operation: result)
+            //showCurrent(operation: result)
+            resultLabel.showCurrent(operation: result)
         }
         else {
             displayErrorAlert()
@@ -33,7 +36,8 @@ class MathViewController: UIViewController {
 
     @IBAction func operIntButtonAction(_ sender: UIButton) {
         mathViewModel.addElementToCurrentOperation(tag: sender.tag)
-        showCurrent(operation: mathViewModel.currentOperation)
+       // showCurrent(operation: mathViewModel.currentOperation)
+        resultLabel.showCurrent(operation: mathViewModel.currentOperation)
     }
     
     func showCurrent(operation: String) {
@@ -45,6 +49,8 @@ class MathViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: nil))//3->tester si on clique sur dismiss alert disparait
         self.present(alert, animated: true, completion: nil)//2 tester l'affichage
     }
+    
+    
 }
 
 // Topbar
@@ -64,6 +70,12 @@ extension MathViewController {
         //change backButton color
         navigationItem.backBarButtonItem?.tintColor = .white
 }
+}
+
+extension UILabel {
+    func showCurrent(operation: String) {
+        self.text! = operation
+    }
 }
 
 

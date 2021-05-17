@@ -19,13 +19,13 @@
 		C07EB7F526089C990018EB19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C07EB7F426089C990018EB19 /* Assets.xcassets */; };
 		C07EB7F826089C990018EB19 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C07EB7F626089C990018EB19 /* LaunchScreen.storyboard */; };
 		C083123C261F245300B73509 /* NotesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C083123B261F245300B73509 /* NotesTableViewController.swift */; };
-		C08B95F4262D73AE007A1F85 /* MathViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08B95F3262D73AE007A1F85 /* MathViewControllerTests.swift */; };
 		C08B95F8262E0182007A1F85 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08B95F7262E0182007A1F85 /* DetailsViewController.swift */; };
 		C08B960226307006007A1F85 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08B960126307006007A1F85 /* HomePageViewController.swift */; };
 		C0CCA81C2636FDB5007DABBC /* noteItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CCA81B2636FDB5007DABBC /* noteItem.swift */; };
 		C0CCA82826385A3C007DABBC /* AddNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CCA82726385A3C007DABBC /* AddNoteViewController.swift */; };
 		C0CD329626122805003D8866 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CD329526122805003D8866 /* LaunchViewController.swift */; };
 		C0F736302649D33000A6F279 /* Treatments.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F7362F2649D33000A6F279 /* Treatments.swift */; };
+		C0F7363E2651CB0F00A6F279 /* NoteViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F7363D2651CB0F00A6F279 /* NoteViewModelTests.swift */; };
 		C0FF9947263F0C83003CC39A /* NoteTableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0FF9946263F0C83003CC39A /* NoteTableDataSource.swift */; };
 		C0FF994D263F0D98003CC39A /* NotesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0FF994C263F0D98003CC39A /* NotesTableViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -58,13 +58,13 @@
 		C07EB7F726089C990018EB19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C07EB7F926089C990018EB19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C083123B261F245300B73509 /* NotesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesTableViewController.swift; sourceTree = "<group>"; };
-		C08B95F3262D73AE007A1F85 /* MathViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathViewControllerTests.swift; sourceTree = "<group>"; };
 		C08B95F7262E0182007A1F85 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		C08B960126307006007A1F85 /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
 		C0CCA81B2636FDB5007DABBC /* noteItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = noteItem.swift; sourceTree = "<group>"; };
 		C0CCA82726385A3C007DABBC /* AddNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteViewController.swift; sourceTree = "<group>"; };
 		C0CD329526122805003D8866 /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 		C0F7362F2649D33000A6F279 /* Treatments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Treatments.swift; sourceTree = "<group>"; };
+		C0F7363D2651CB0F00A6F279 /* NoteViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewModelTests.swift; sourceTree = "<group>"; };
 		C0FF9946263F0C83003CC39A /* NoteTableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTableDataSource.swift; sourceTree = "<group>"; };
 		C0FF994C263F0D98003CC39A /* NotesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesTableViewCell.swift; sourceTree = "<group>"; };
 		E77E247A2308FA1FF47892EB /* Pods-test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-test.release.xcconfig"; path = "Target Support Files/Pods-test/Pods-test.release.xcconfig"; sourceTree = "<group>"; };
@@ -116,9 +116,9 @@
 			isa = PBXGroup;
 			children = (
 				C06F80F9260A41D800E719D6 /* MathViewModelTests.swift */,
-				C08B95F3262D73AE007A1F85 /* MathViewControllerTests.swift */,
 				C06F816E260B7CBA00E719D6 /* testTests.swift */,
 				C06F8170260B7CBA00E719D6 /* Info.plist */,
+				C0F7363D2651CB0F00A6F279 /* NoteViewModelTests.swift */,
 			);
 			path = testTests;
 			sourceTree = "<group>";
@@ -351,7 +351,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C06F816F260B7CBA00E719D6 /* testTests.swift in Sources */,
-				C08B95F4262D73AE007A1F85 /* MathViewControllerTests.swift in Sources */,
+				C0F7363E2651CB0F00A6F279 /* NoteViewModelTests.swift in Sources */,
 				C06F8178260B7CC600E719D6 /* MathViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

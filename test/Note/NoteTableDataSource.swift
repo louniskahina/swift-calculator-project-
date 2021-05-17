@@ -12,12 +12,12 @@ import UIKit
 extension NotesTableViewController : UITableViewDataSource {
  
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return notes.count
+        return treatments.notes.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell =  tableView.dequeueReusableCell(withIdentifier: "cell", for : indexPath ) as! NotesItemTableViewCell
-        let note = notes[indexPath.row]
+        let note = treatments.notes[indexPath.row]
         cell.titleLabel?.text = note.title
         cell.descriptionLabel?.text = note.descrip
         return cell
@@ -27,8 +27,8 @@ extension NotesTableViewController : UITableViewDataSource {
         if let destination = segue.destination as? DetailsViewController {
             let indexPath = tableView.indexPathsForSelectedRows?.first
             let selectedRow = indexPath!.row
-            destination.titleText = notes[selectedRow].title
-            destination.descripText = notes[selectedRow].descrip
+            destination.titleText = treatments.notes[selectedRow].title
+            destination.descripText = treatments.notes[selectedRow].descrip
         }
     }
  

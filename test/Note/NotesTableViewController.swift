@@ -9,25 +9,21 @@ import UIKit
 import MaterialComponents.MaterialButtons
 
 class NotesTableViewController: UIViewController {
-    
+    let treatments =  Treatments()
     @IBOutlet weak var tableView: UITableView!
-    //let notes = [Note()] un tableau avec un element
-   
-    var notes = [Note]()
-    var noteTitre_ : String = ""
-    var noteDesription_ : String = ""
+    
+   // var notes = [Note]()
+    var noteTitre_ = String()
+    var noteDesription_ = String()
         
     override func viewDidLoad() {
         super.viewDidLoad()
         
         //retrieve data
-        //notes = defaults.array(forKey: "kahina")
-        if let data = UserDefaults.standard.value(forKey:"notes") as? Data {
-            notes = try! PropertyListDecoder().decode(Array<Note>.self, from: data)
-        }
+
         //init note table
         tableView.reloadData()
-        tableView.dataSource = self
+        tableView.dataSource = self 
         
         //cell autoresize
         tableView.rowHeight = UITableView.automaticDimension
@@ -41,17 +37,20 @@ class NotesTableViewController: UIViewController {
         let addNoteVC = segue.source as! AddNoteViewController
         noteTitre_ = addNoteVC.noteTitre
         noteDesription_ = addNoteVC.noteDescription
+        
+        //creat note
         let newNote = Note(title: noteTitre_, descrip: noteDesription_)
-        notes.append(newNote)
-        //save newnote
-        UserDefaults.standard.set(try? PropertyListEncoder().encode(notes), forKey:"notes")
-
+        
+        //add note
+        treatments.add(newNote)
+        
+        //reload data
         tableView.reloadData()
-         
     }
     
     @IBAction func clearListButton(_ sender: UIBarButtonItem) {
-        
+        treatments.remove()
+        tableView.reloadData()
     }
     
 }
